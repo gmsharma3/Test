@@ -1,0 +1,18 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>Home page</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h:outputText value="Login success with User : #{test.username}" />
+		<h:commandButton value="view profile">
+			<f:ajax event="click" render="userProfile" />
+		</h:commandButton>
+		<h:dataTable id="userProfile">
+		Username : <h:outputText value="#{test.username}" />
+		</h:dataTable>
+	</h:form>
+</h:body>
+</html>
